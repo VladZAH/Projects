@@ -65,3 +65,4 @@ function reset(){
 	h1.style.backgroundColor = 'steelblue';
 };
 
+}());
