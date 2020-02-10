@@ -65,4 +65,30 @@ function reset(){
 	h1.style.backgroundColor = 'steelblue';
 };
 
+
+function changeColors(clr){
+for(var i = 0; i < squares.length; i++){
+	squares[i].style.backgroundColor = clr;
+}
+};
+
+function pickColor(){
+	var random = Math.floor(Math.random() * colors.length);
+	return colors[random];
+};
+
+function generateRandom(num){
+	arr = [];
+	for (var i = 0; i < num; i++){
+		arr.push(randomColor());
+	};
+	return arr;
+}
+
+function randomColor(){
+	var r = Math.floor(Math.random() * 256);
+	var g = Math.floor(Math.random() * 256);
+	var b = Math.floor(Math.random() * 256);
+	return `rgb(${r}, ${g}, ${b})`;
+};
 }());
