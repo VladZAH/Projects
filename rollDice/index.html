@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                      <h1>  GAME RULES: </h1>
+                        <p>
+                            <p>- At the begining, enter the final score</p>
+                            <p>- The game has 2 players, playing in rounds</p>
+                            <p>- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score</p>
+                            <p>- BUT, if the player rolls a 1, all his ROUND score gets lost, and dices will dissapear. After that, it's the next player's turn</p>
+                            <p>- As this game is really famous, a lot of people have a strategy to play it, thats why NEW rule is: if both dices show 6, players GLOBAL score is lost</p>
+                            <p>- The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. If player choose to do so, it's the next player's turn</p>
+                            <p>- The first player to reach points stated in FINAL SCORE on his GLOBAL score wins the game</p>
+                        </p>
+                </div>
+            </div>
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-rules"><i class="ion-ios-list-outline"></i>Rules</button>
+            <button class="btn-roll"><i class="ion-ios-play-outline"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-pause-outline"></i>Hold</button>
+
+            <input type="text" placeholder="Final score" class="final-score">
+            
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+            
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
+</html>
